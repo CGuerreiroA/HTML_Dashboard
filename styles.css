@@ -164,10 +164,31 @@ body {
 
 /* ===== MAIN DASHBOARD ===== */
 .dashboard-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-bottom: 20px;
+}
+
+.dashboard-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.section-description {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    font-size: 1rem;
 }
 
 .dashboard-column {
@@ -475,7 +496,7 @@ body {
     color: #27ae60;
 }
 
-/* ===== STORY CARD ===== */
+/* ===== STORY CARD & OFFICE SOLAR STATUS ===== */
 .story-card {
     background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
     border-radius: 15px;
@@ -527,6 +548,59 @@ body {
     font-size: 1.3rem;
     font-weight: bold;
     color: #27ae60;
+}
+
+/* Office Solar Status */
+.office-solar-status {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.office-status-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.office-status-item:hover {
+    transform: translateX(5px);
+}
+
+.office-status-item.completed {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-left: 4px solid #27ae60;
+}
+
+.office-status-item.pending {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-left: 4px solid #f39c12;
+}
+
+.status-icon {
+    font-size: 2rem;
+    min-width: 40px;
+}
+
+.status-info h4 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.status-info p {
+    color: #5d4037;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.status-impact {
+    font-weight: 600;
+    color: #27ae60;
+    font-size: 0.85rem;
 }
 
 /* ===== ACHIEVEMENTS ===== */

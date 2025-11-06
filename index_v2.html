@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EMBRACE Environmental Impact Dashboard - Clean, professional GHG emissions tracking">
+    <meta name="author" content="ADRA EMBRACE Project">
+    <title>EMBRACE - Environmental Dashboard v2</title>
+    <link rel="stylesheet" href="styles_v2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Banner -->
+    <header class="header-banner">
+        <div class="container">
+            <h1>🌍 EMBRACE PROJECT</h1>
+            <p class="subtitle">Environmental Impact Dashboard - GHG Emissions Tracking</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Primary KPI Cards -->
+        <section class="kpi-section">
+            <div class="kpi-card kpi-primary">
+                <div class="kpi-icon">🌍</div>
+                <div class="kpi-content">
+                    <div class="kpi-label">TOTAL EMISSIONS</div>
+                    <div class="kpi-value">237.01</div>
+                    <div class="kpi-unit">tCO2e</div>
+                </div>
+                <div class="kpi-badge">
+                    <span class="badge-value">-15%</span>
+                    <span class="badge-label">vs Last Year</span>
+                </div>
+            </div>
+
+            <div class="kpi-card kpi-scope1">
+                <div class="kpi-label">SCOPE 1 - Direct</div>
+                <div class="kpi-value">15.71</div>
+                <div class="kpi-unit">tCO2e</div>
+                <div class="kpi-percentage">6.63%</div>
+            </div>
+
+            <div class="kpi-card kpi-scope2">
+                <div class="kpi-label">SCOPE 2 - Energy</div>
+                <div class="kpi-value">20.85</div>
+                <div class="kpi-unit">tCO2e</div>
+                <div class="kpi-percentage">8.8%</div>
+            </div>
+
+            <div class="kpi-card kpi-scope3">
+                <div class="kpi-label">SCOPE 3 - Indirect</div>
+                <div class="kpi-value">200.45</div>
+                <div class="kpi-unit">tCO2e</div>
+                <div class="kpi-percentage">84.57%</div>
+            </div>
+        </section>
+
+        <!-- Emissions Breakdown & Sustainability Score -->
+        <section class="breakdown-section">
+            <div class="chart-card chart-large">
+                <h3>📊 Emissions Breakdown by Scope</h3>
+                <div class="chart-container">
+                    <canvas id="scopeChart"></canvas>
+                </div>
+                <div class="scope-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot scope3"></span>
+                        <span>Scope 3: 84.57% (200.45 tCO2e)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot scope1"></span>
+                        <span>Scope 1: 6.63% (15.71 tCO2e)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot scope2"></span>
+                        <span>Scope 2: 8.8% (20.85 tCO2e)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>🎯 Sustainability Score</h3>
+                <div class="gauge-container">
+                    <div class="gauge-circle">
+                        <div class="gauge-fill" style="--gauge-value: 78"></div>
+                        <div class="gauge-center">
+                            <span class="gauge-value">78</span>
+                            <span class="gauge-max">/100</span>
+                        </div>
+                    </div>
+                    <div class="gauge-label">On Track</div>
+                    <div class="gauge-target">Target: 80</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: EMBRACE PROJECT ACTIVITY -->
+        <section class="section-divider">
+            <h2>🌱 EMBRACE PROJECT ACTIVITY</h2>
+            <p class="section-description">Environmental impact from project activities and interventions</p>
+        </section>
+
+        <section class="activities-section">
+            <div class="chart-card chart-full">
+                <h3>🎯 Top Impact Activities</h3>
+                <div class="activity-bars">
+                    <div class="activity-item">
+                        <div class="activity-header">
+                            <span class="activity-name">Solar Panel Installation</span>
+                            <span class="activity-value">138 tCO2e</span>
+                        </div>
+                        <div class="activity-bar">
+                            <div class="bar-fill high" style="width: 100%"></div>
+                        </div>
+                        <div class="activity-meta">
+                            <span class="impact-badge high">High Impact</span>
+                            <span class="category">Energy & Emissions</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-header">
+                            <span class="activity-name">Medical Equipment & Surgical Supplies</span>
+                            <span class="activity-value">44 tCO2e</span>
+                        </div>
+                        <div class="activity-bar">
+                            <div class="bar-fill medium" style="width: 32%"></div>
+                        </div>
+                        <div class="activity-meta">
+                            <span class="impact-badge medium">Medium Impact</span>
+                            <span class="category">Equipment & Assets</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-header">
+                            <span class="activity-name">Office Energy - Transitioning to Solar</span>
+                            <span class="activity-value">30 tCO2e</span>
+                        </div>
+                        <div class="activity-bar">
+                            <div class="bar-fill medium" style="width: 22%"></div>
+                        </div>
+                        <div class="activity-meta">
+                            <span class="impact-badge medium">Medium Impact</span>
+                            <span class="category">Energy & Emissions</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-header">
+                            <span class="activity-name">Humanitarian Aid Distribution</span>
+                            <span class="activity-value">17 tCO2e</span>
+                        </div>
+                        <div class="activity-bar">
+                            <div class="bar-fill low" style="width: 12%"></div>
+                        </div>
+                        <div class="activity-meta">
+                            <span class="impact-badge low">Low Impact</span>
+                            <span class="category">Humanitarian Aid</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-header">
+                            <span class="activity-name">Transportation & Logistics</span>
+                            <span class="activity-value">7 tCO2e</span>
+                        </div>
+                        <div class="activity-bar">
+                            <div class="bar-fill low" style="width: 5%"></div>
+                        </div>
+                        <div class="activity-meta">
+                            <span class="impact-badge low">Low Impact</span>
+                            <span class="category">Transportation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: OFFICE EMISSIONS -->
+        <section class="section-divider">
+            <h2>🏢 OFFICE EMISSIONS</h2>
+            <p class="section-description">Direct emissions from office operations and energy consumption</p>
+        </section>
+
+        <section class="office-section">
+            <div class="chart-card">
+                <h3>☀️ Solar Energy Transition</h3>
+                <div class="solar-status">
+                    <div class="status-item completed">
+                        <div class="status-icon">✅</div>
+                        <div class="status-info">
+                            <h4>Dekwane Office</h4>
+                            <p>100% Solar Power</p>
+                            <span class="impact">-12 tCO2e/year</span>
+                        </div>
+                    </div>
+                    <div class="status-item completed">
+                        <div class="status-icon">✅</div>
+                        <div class="status-info">
+                            <h4>Baalbeck Center</h4>
+                            <p>100% Solar Power</p>
+                            <span class="impact">-6 tCO2e/year</span>
+                        </div>
+                    </div>
+                    <div class="status-item pending">
+                        <div class="status-icon">⏳</div>
+                        <div class="status-info">
+                            <h4>Other Offices</h4>
+                            <p>Transitioning to Solar</p>
+                            <span class="impact">Potential: -8 tCO2e/year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>📍 Office Locations</h3>
+                <div class="location-list">
+                    <div class="location-item">
+                        <div class="location-icon">📍</div>
+                        <div class="location-info">
+                            <h4>Beirut</h4>
+                            <span class="location-emissions">45 tCO2e</span>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">📍</div>
+                        <div class="location-info">
+                            <h4>Dekwane</h4>
+                            <span class="location-emissions">38 tCO2e</span>
+                            <span class="location-badge">100% Solar</span>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">📍</div>
+                        <div class="location-info">
+                            <h4>Baalbeck</h4>
+                            <span class="location-emissions">32 tCO2e</span>
+                            <span class="location-badge">100% Solar</span>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">📍</div>
+                        <div class="location-info">
+                            <h4>Aley</h4>
+                            <span class="location-emissions">28 tCO2e</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Insights -->
+        <section class="insights-section">
+            <div class="insight-card success">
+                <div class="insight-icon">✓</div>
+                <div class="insight-content">
+                    <h4>Success</h4>
+                    <p>Reusable products program avoided 138 tCO2e year-to-date</p>
+                </div>
+            </div>
+            <div class="insight-card success">
+                <div class="insight-icon">✓</div>
+                <div class="insight-content">
+                    <h4>Achievement</h4>
+                    <p>Baalbeck Center now runs on 100% solar power</p>
+                </div>
+            </div>
+            <div class="insight-card info">
+                <div class="insight-icon">📊</div>
+                <div class="insight-content">
+                    <h4>Trend</h4>
+                    <p>Scope 3 emissions decreasing steadily at 3% per month</p>
+                </div>
+            </div>
+            <div class="insight-card opportunity">
+                <div class="insight-icon">💡</div>
+                <div class="insight-content">
+                    <h4>Opportunity</h4>
+                    <p>Expand solar to remaining offices for -8 tCO2e/year reduction</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="achievements-section">
+            <h3>🏆 Sustainability Achievements</h3>
+            <div class="achievements-grid">
+                <div class="achievement unlocked">
+                    <div class="achievement-icon">🥇</div>
+                    <div class="achievement-name">Carbon Champion</div>
+                    <div class="achievement-desc">15% YoY reduction</div>
+                    <div class="achievement-status">UNLOCKED</div>
+                </div>
+                <div class="achievement unlocked">
+                    <div class="achievement-icon">🌟</div>
+                    <div class="achievement-name">Solar Pioneer</div>
+                    <div class="achievement-desc">80% solar coverage</div>
+                    <div class="achievement-status">UNLOCKED</div>
+                </div>
+                <div class="achievement unlocked">
+                    <div class="achievement-icon">♻️</div>
+                    <div class="achievement-name">Zero Waste Hero</div>
+                    <div class="achievement-desc">138 tCO2e avoided</div>
+                    <div class="achievement-status">UNLOCKED</div>
+                </div>
+                <div class="achievement locked">
+                    <div class="achievement-icon">🔒</div>
+                    <div class="achievement-name">Net Zero</div>
+                    <div class="achievement-desc">Need 50 tCO2e more</div>
+                    <div class="achievement-status">LOCKED</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+        <div class="container">
+            <p>EMBRACE Project - Environmental Impact Dashboard v2.0</p>
+            <p>&copy; 2024 ADRA EMBRACE Project | Last Updated: November 2025</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script_v2.js"></script>
+</body>
+</html>

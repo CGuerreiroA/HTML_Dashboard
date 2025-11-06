@@ -77,7 +77,11 @@
 
     <!-- Main Dashboard Content -->
     <main class="dashboard-main">
-        <!-- Left Column -->
+        <!-- Section 1: EMBRACE Project Activity -->
+        <section class="dashboard-section">
+            <h2 class="section-title">🌱 EMBRACE PROJECT ACTIVITY</h2>
+            <div class="section-description">Environmental impact from project activities and interventions</div>
+        
         <div class="dashboard-column left">
             <!-- KPI Cards -->
             <section class="kpi-section">
@@ -158,9 +162,9 @@
                 </div>
             </section>
 
-            <!-- Top Activities -->
+            <!-- Project Activities -->
             <section class="chart-section">
-                <h3>🎯 Top Impact Activities</h3>
+                <h3>🎯 Project Activities Impact</h3>
                 <div class="activity-bars">
                     <div class="activity-item">
                         <div class="activity-header">
@@ -234,37 +238,42 @@
                 </div>
             </section>
         </div>
+        </section>
 
-        <!-- Right Column -->
+        <!-- Section 2: Office Emissions -->
+        <section class="dashboard-section">
+            <h2 class="section-title">🏢 OFFICE EMISSIONS</h2>
+            <div class="section-description">Direct emissions from office operations and energy consumption</div>
+        
         <div class="dashboard-column right">
-            <!-- Trend Chart -->
-            <section class="chart-section">
-                <h3>📈 Emissions Trend & Forecast</h3>
-                <div class="chart-container">
-                    <canvas id="trendChart"></canvas>
-                </div>
-                <div class="trend-insights">
-                    <div class="insight-item">
-                        <i class="fas fa-arrow-down"></i>
-                        <span>Decreasing trend: -3% per month</span>
-                    </div>
-                    <div class="insight-item">
-                        <i class="fas fa-bullseye"></i>
-                        <span>On track to meet 2025 target</span>
-                    </div>
-                </div>
-            </section>
 
-            <!-- Story Card -->
+            <!-- Office Energy Status -->
             <section class="story-card">
-                <h3>📖 This Month's Story</h3>
-                <div class="story-content">
-                    <div class="story-badge">🌟 Milestone Achieved!</div>
-                    <h4>Dekwane Office Reaches 100% Solar Power</h4>
-                    <p>In October 2024, our Dekwane office completed its transition to 100% solar energy, marking a significant milestone in our sustainability journey.</p>
-                    <div class="story-impact">
-                        <span class="impact-label">Annual Impact:</span>
-                        <span class="impact-value">-12 tCO2e</span>
+                <h3>☀️ Solar Energy Transition</h3>
+                <div class="office-solar-status">
+                    <div class="office-status-item completed">
+                        <div class="status-icon">✅</div>
+                        <div class="status-info">
+                            <h4>Dekwane Office</h4>
+                            <p>100% Solar Power</p>
+                            <span class="status-impact">-12 tCO2e/year</span>
+                        </div>
+                    </div>
+                    <div class="office-status-item completed">
+                        <div class="status-icon">✅</div>
+                        <div class="status-info">
+                            <h4>Baalbeck Center</h4>
+                            <p>100% Solar Power</p>
+                            <span class="status-impact">-6 tCO2e/year</span>
+                        </div>
+                    </div>
+                    <div class="office-status-item pending">
+                        <div class="status-icon">⏳</div>
+                        <div class="status-info">
+                            <h4>Other Offices</h4>
+                            <p>Transitioning to Solar</p>
+                            <span class="status-impact">Potential: -8 tCO2e/year</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -338,6 +347,7 @@
                 </div>
             </section>
         </div>
+        </section>
     </main>
 
     <!-- Insights Panel -->
@@ -352,9 +362,9 @@
                 <i class="fas fa-chart-line"></i>
                 <p><strong>Trend:</strong> Scope 3 decreasing steadily (-3%/month)</p>
             </div>
-            <div class="insight-card opportunity">
-                <i class="fas fa-lightbulb"></i>
-                <p><strong>Opportunity:</strong> Switch Baalbeck to solar = -6 tCO2e</p>
+            <div class="insight-card success">
+                <i class="fas fa-check-circle"></i>
+                <p><strong>Success:</strong> Baalbeck Center now runs on 100% solar power</p>
             </div>
             <div class="insight-card success">
                 <i class="fas fa-check-circle"></i>
@@ -370,16 +380,16 @@
             <div class="action-card">
                 <div class="action-header">
                     <span class="action-icon">☀️</span>
-                    <h4>Install Solar at Baalbeck Office</h4>
+                    <h4>Expand Solar to Remaining Offices</h4>
                 </div>
                 <div class="action-metrics">
                     <div class="metric">
                         <span class="metric-label">Impact</span>
-                        <span class="metric-value">-6 tCO2e/year</span>
+                        <span class="metric-value">-8 tCO2e/year</span>
                     </div>
                     <div class="metric">
                         <span class="metric-label">Cost</span>
-                        <span class="metric-value">$15,000</span>
+                        <span class="metric-value">$20,000</span>
                     </div>
                     <div class="metric">
                         <span class="metric-label">ROI</span>
